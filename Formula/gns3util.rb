@@ -13,7 +13,12 @@ class Gns3util < Formula
   end
 
   def install
-    bin.install "gns3util"
+    # Install the binary (rename from platform-specific name to gns3util)
+    if Hardware::CPU.arm?
+      bin.install "gns3util-darwin-arm64" => "gns3util"
+    else
+      bin.install "gns3util-darwin-amd64" => "gns3util"
+    end
     
     # Install shell completions if they exist
     if File.exist?("completions/gns3util.bash")
