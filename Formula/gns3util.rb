@@ -4,6 +4,11 @@ class Gns3util < Formula
   license "GPL-3.0-or-later"
   version "1.0.3"
 
+  livecheck do
+    url :stable
+    strategy :github_latest
+  end
+
   if Hardware::CPU.arm?
     url "https://github.com/Stefanistkuhl/gns3-api-util/releases/download/v1.0.3/gns3util-darwin-arm64.tar.gz"
     sha256 "9b2ea64de96bce58c1595a8e19e4ca47e5944fc1a2ed7074f97255d202af6027"
@@ -13,23 +18,17 @@ class Gns3util < Formula
   end
 
   def install
-    # Pick the correct binary inside the tarball
-    binary_name = Hardware::CPU.arm? ? "gns3util-darwin-arm64" : "gns3util-darwin-amd64"
+    # Install the correct top-level binary and rename it to 'gns3util'
+    binary = Hardware::CPU.arm? ? "gns3util-darwin-arm64" : "gns3util-darwin-amd64"
+    bin.install binary => "gns3util"
 
-    # Install and rename it to gns3util
-    bin.install binary_name => "gns3util"
-
-    # Shell completions
-    bash_completion.install "completions/gns3util.bash" => "gns3util"
-    zsh_completion.install "completions/_gns3util"
-    fish_completion.install "completions/gns3util.fish"
-
-    # Man pages (if they exist)
-    man1.install "man/gns3util.1" if File.exist?("man/gns3util.1")
+    # Ship provided shell completions if present
+    bash_completion.install "completions/gns3util.bash" => "gns3util" if File.exist?("completions/gns3util.bash")
+    zsh_completion.install "completions/_gns3util" if File.exist?("completions/_gns3util")
+    fish_completion.install "completions/gns3util.fish" if File.exist?("completions/gns3util.fish")
   end
 
   test do
-    system "#{bin}/gns3util", "--help"
+    assert_match "gns3util", shell_output("#{bin}/gns3util --version")
   end
 end
-
