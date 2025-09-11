@@ -20,11 +20,11 @@ class Gns3util < Formula
     bin.install binary_name => "gns3util"
 
     # Shell completions
-    bash_completion.install "completions/gns3util.bash" => "gns3util" if File.exist?("completions/gns3util.bash")
-    zsh_completion.install "completions/_gns3util" if File.exist?("completions/_gns3util")
-    fish_completion.install "completions/gns3util.fish" if File.exist?("completions/gns3util.fish")
+    bash_completion.install "completions/gns3util.bash" => "gns3util"
+    zsh_completion.install "completions/_gns3util"
+    fish_completion.install "completions/gns3util.fish"
 
-    # Man pages
+    # Man pages (if they exist)
     man1.install "man/gns3util.1" if File.exist?("man/gns3util.1")
   end
 
