@@ -2,7 +2,7 @@ class Gns3util < Formula
   desc "GNS3 API utility for managing GNS3v3 servers"
   homepage "https://github.com/Stefanistkuhl/gns3-api-util"
   license "GPL-3.0-or-later"
-  version "1.0.4"
+  version "1.0.5"
 
   livecheck do
     url :stable
@@ -10,11 +10,11 @@ class Gns3util < Formula
   end
 
   if Hardware::CPU.arm?
-    url "https://github.com/Stefanistkuhl/gns3-api-util/releases/download/v1.0.4/gns3util-darwin-arm64.tar.gz"
-    sha256 "af101aab472b2c14c09575e005be120f06cf542e553597eca7b404079bd8f60c"
+    url "https://github.com/Stefanistkuhl/gns3-api-util/releases/download/v1.0.5/gns3util-darwin-arm64.tar.gz"
+    sha256 ""
   else
-    url "https://github.com/Stefanistkuhl/gns3-api-util/releases/download/v1.0.4/gns3util-darwin-amd64.tar.gz"
-    sha256 "02aa9758f2633b2f4da0c7962e5b54df49d4c80d88b0c5170b1ab2126121427c"
+    url "https://github.com/Stefanistkuhl/gns3-api-util/releases/download/v1.0.5/gns3util-darwin-amd64.tar.gz"
+    sha256 ""
   end
 
   def install
