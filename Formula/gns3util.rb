@@ -1,8 +1,8 @@
 class Gns3util < Formula
   desc "GNS3 API utility for managing GNS3v3 servers"
   homepage "https://github.com/Stefanistkuhl/gns3-api-util"
-  license "GPL-3.0-or-later"
   version "1.0.0"
+  license "GPL-3.0-or-later"
 
   livecheck do
     url :stable
