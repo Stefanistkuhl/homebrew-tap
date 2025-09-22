@@ -3,14 +3,14 @@ class Gns3util < Formula
   homepage "https://github.com/Stefanistkuhl/gns3-api-util"
 
   if Hardware::CPU.arm?
-    url "https://github.com/Stefanistkuhl/gns3-api-util/releases/download/v1.1.0/gns3util-darwin-arm64.tar.gz"
-    sha256 "46c37c9bbb869ae9c1d352523be835b12209095ea669da30521d4b3a8b89c09a"
+    url "https://github.com/Stefanistkuhl/gns3-api-util/releases/download/v1.1.1/gns3util-darwin-arm64.tar.gz"
+    sha256 "1b3f619935fc139258088c8ff0952e0b4bf8913a21d0ea377c888d5abfdebf14"
   else
-    url "https://github.com/Stefanistkuhl/gns3-api-util/releases/download/v1.1.0/gns3util-darwin-amd64.tar.gz"
-    sha256 "f0eaac262d8e417ca4c8716a6f3a9ba2c59798cca591c40236a83e51d4dd73d1"
+    url "https://github.com/Stefanistkuhl/gns3-api-util/releases/download/v1.1.1/gns3util-darwin-amd64.tar.gz"
+    sha256 "fe9da6e37ad61fe9bb8006f49d2ebd23877aff7490febdc3588757ba10ac2631"
   end
 
-  version "1.1.0"
+  version "1.1.1"
   license "GPL-3.0-or-later"
 
   livecheck do
