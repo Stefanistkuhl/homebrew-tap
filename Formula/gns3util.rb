@@ -1,17 +1,17 @@
 class Gns3util < Formula
   desc "GNS3 API utility for managing GNS3v3 servers"
   homepage "https://github.com/Stefanistkuhl/gns3-api-util"
-  version "1.2.5"
+  version "1.2.6"
   license "GPL-3.0-or-later"
 
   on_macos do
     on_arm do
-      url "https://github.com/Stefanistkuhl/gns3-api-util/releases/download/v1.2.5/gns3util-darwin-arm64.tar.gz"
-      sha256 "8f5c76ccd7e34fc30923d69c78f1cd3255e28b1694b7d497e3b4dfff3232e453"
+      url "https://github.com/Stefanistkuhl/gns3-api-util/releases/download/v1.2.6/gns3util-darwin-arm64.tar.gz"
+      sha256 "2bddd1c76316e96291f3a108b3a3567338253cd4d54a7ef25c3d6ae6003f9ef4"
     end
     on_intel do
-      url "https://github.com/Stefanistkuhl/gns3-api-util/releases/download/v1.2.5/gns3util-darwin-amd64.tar.gz"
-      sha256 "dcd4f10ddcb50a6892f28e7fbf34211c37ead1f1c911bc688c622fb44d3103e7"
+      url "https://github.com/Stefanistkuhl/gns3-api-util/releases/download/v1.2.6/gns3util-darwin-amd64.tar.gz"
+      sha256 "8e1d6be8221969d6932de1ed411f898161c0ed2ee601adcfc06b72753fc12e26"
     end
   end
 
